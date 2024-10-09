@@ -49,7 +49,7 @@ const getNoteByIdHandler = (request, h) => {
   if (id) {
     const note = notes.filter((note) => note.id === id)[0];
 
-    if (note.length > 0) {
+    if (Object.keys(note).length > 0) {
       const response = h.response({
         status: 'success',
         data: {
